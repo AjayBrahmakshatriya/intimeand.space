@@ -9,98 +9,71 @@ article {
 </style>
 <script>document.getElementById("link-tutorial").classList.add("active");</script>
 
-<h1>Building DSLs made easy with the BuildIt Framework</h1>
+<h1>High-Performance DSLs targeting GPUs, FPGAs and Accelerators with the BuildIt Framework</h1>
 <ul>
 <!--<li>CGO 2024, Workshop and Tutorials, <b>8:30 am, 2nd March 2024</b>, Edinburgh, UK</li>-->
 <!--<li>DSL Development Workshop@MIT, <b>6th May 2024 3pm - 6pm</b> 32-G882 Stata Center, 32 Vassar St</li>-->
-<li>PLDI 2024, Workshop and Tutorials, <b>24th June 2024</b> Copenhagen, Denmark</li>
+<!--<li>PLDI 2024, Workshop and Tutorials, <b>24th June 2024</b> Copenhagen, Denmark</li>-->
+<li>ISCA 2025, Workshop and Tutorials, <b>22nd June 2025</b> Tokyo, Japan</li>
+
+
+
+
+
+
+
 </ul>
 <br>
 Tutorial Repo with all the code and instructions at - <a href="https://github.com/BuildIt-lang/buildit-array" target="_blank">https://github.com/BuildIt-lang/buildit-array</a>
 <br>
 <br>
-The BuildIt project was started in 2020 with the goal of making it possible for rapidly prototyping embedded DSLs using a multi-stage programming approach while targeting parallel CPUs, GPUs and now FPGAs. Our publications in the previous years demonstrated how BuildIt can be used to write DSLs that match the performance of state-of-the-art compilers with a small fraction of the development effort. Although BuildIt is targeted towards domain experts who have limited experience with compiler technology, it also greatly simplifies the development process for compiler experts allowing implementing analyses, transformations and code generations for various architectures with a fraction of lines of code as compared to traditional compilers. We believe this makes BuildIt a very interesting topic for not just PLDI attendees but also the co-located workshops. 
+
+We are organizing a hands-on tutorial on creating high-performance DSLs (Domain Specific Languages) with the BuildIt framework. The BuildIt project makes it possible to rapidly prototype embedded DSLs using a multi-stage programming approach while targeting parallel CPUs, GPUs and now FPGAs. BuildIt is targeted towards domain experts who have limited experience with compiler technology. However it also greatly simplifies the development process for compiler experts allowing implementing analyses, transformations and code generations for various architectures with a fraction of lines of code as compared to traditional compilers.
 <br>
-BuildIt not only simplifies the process of implementing compilers but also provides other toolchain support like debugging. Our recent paper at GGO 2023 that was awarded a distinguished paper award demonstrates how rich and customizable debugging support can be added to DSLs written with BuildIt without a single line of code change. 
+This iteration of the tutorial will focus on techniques we have developed to target DSLs for novel architectures like GPUs, FPGAs and accelerators from the same high-level representation. We will use a case study of three different DSLs developed in the past year namely - MARCH, StreamIt and G2 targeting FPGAs, accelerators and GPUs respectively. The tutorial will be completely hands-on where the presenters will cover the basics of BuildIt and code generation followed by live-coding to implement new optimizations to extend these frameworks. The tutorial will cover how to analyze, transform and generate code for these architectures without understanding any compiler related terminology or techniques. As upcoming accelerators and GPUs are becoming ever more useful in the architecture community both in industry and academia we believe this tutorial would be very relevant to early and late-stage PhD students and industry researchers looking to build software stacks for the architectures they develop.
+The tutorial will be completely hands-on, with presentations from the organizers and relevant skeleton code shared for development. Attendees are expected to have access to a computer with Linux or MacOS. Windows with WSL also works great. Basic experience with C++ expected. 
 <br>
+Here is a brief agenda/summary of the topics we plan to cover:
 <br>
-<h2>Agenda</h2>
 <ol>
-<li>Basics of BuildIt [1 hr, including setup time]
+<li> Basics of BuildIt and Recap [1 hr, including setup time]
 <ol>
 <li>Writing programs in multiple stages using BuildIt’s dyn&lt;T&gt; and static&lt;T&gt; types</li>
 <li>Implementing a simple DSL that generates naive code for user programs</li>
 </ol>
 </li>
-<li>Optimizations with BuildIt [1 hr]
+<li>Optimizations with BuildIt [3 hr]
 <ol>
-<li>Implementing a whole-program analysis for the DSL that enables optimizations without writing any “compiler-ish” code. </li>
-<li>Using analysis results and user schedules to specialize and optimize the generated code. </li>
-<li>Using specialization and BuildIt annotations to retarget the generated code for Nvidia GPUs </li>
+<li>The ongoing project on NetBlocks and its FPGA implementation supported by JST ASPIRE</li>
+<li>Overview and deepdive of the G2 DSL for GPUs</li>
+<li>Overview and deepdive of the MARCH DSL for FPGAs</li>
 </ol>
 </li>
-<!--
-<li>Adding Debugger Support [45 mins]
+<!--c. Overview and deepdive of the StreamIt DSL targeting accelerators-->
+<li>Adding optimizations to the simple DSL
 <ol>
-<li>Adding D2X support to above implemented DSL and using it with GDB to debug programs</li>
-<li>View input program + Input program breakpoints</li>
-<li>View program state</li>
-<li>View optimization details in the debugger</li>
-<li>Customizing D2X generated debug information with custom user defined commands</li>
+<li>Add new optimizations to the toy DSL from different architectures</li>
 </ol>
 </li>
--->
-<li>Hear from BuildIt Users/Contributors [1 hr]
-<ol>
-<li>Cola and Shim – Prof. Saman Amarasinghe and Jessica Ray</li>
-<!--<li> - Manya</li>-->
-<li>Lightweight Fusion of General Purpose Code - Manya Bansal</li>
-<!--<li>MARCH - Francesco Peverelli</li>-->
-<li>A Hybrid IR for BuildIt - Vedant Paranjape</li>
-<li>Netblocks - Ajay Brahmakshatriya</li>
 </ol>
-</li>
-
-<li>Optional: Develop a new DSL of your interest with help from the organizers.
-</li>
-</ol>
-<h2>Pre-requisistes</h2>
-The tutorial will be completely hands-on, with presentations from the organizers and relevant skeleton code shared for development. <br>
-Attendees are expected to have access to a computer with Linux or MacOS. Windows with WSL also works great. A system with CUDA enabled GPU (optional). Basic experience with C++ expected.
+We have free BuildIt swag for all attendees!
 <br>
 <br>
-We also have some BuildIt swag for attendees!!
-<br>
+<b>A part of this tutorial will be supported by JST ASPIRE, Grant Number JPMJAP2430. </b>
 <hr>
-<h2> Organizers and Speakers</h2>
-<!--<ol>
-<li>Ajay Brahmakshatriya, Massachusetts Institute of Technology. <a href="mailto:ajaybr@mit.edu">Email: ajaybr@mit.edu</a></li>
-<li>Saman Amarasinghe, Massachusetts Institute of Technology</li>
-</ol>
--->
-<div>
-<img src="Ajay.jpg" width = 200/><br>
-<b>Ajay Brahmakshatriya</b> (ajaybr@mit.edu) is a 6th year PhD student advised by Prof. Saman Amarasinghe at CSAIL, MIT. His research interests are
-making it easier for folks to create their own programming languages with focus on high-performance systems domains.
-In the past he has worked on DSLs for domains like graphs and networks targeting a variety of architectures like
-CPUs, GPUs and domain specific hardware. His current work on BuildIt makes the process of designing and implementing
-DSLs easier while also providing other toolchain support like debugging.
-</div>
+<h3>Speakers</h3>
+<u>Ajay Brahmakshatriya: PhD Student, Massachusetts Institute of Technology</u>
 <br>
-<div>
-<img src="Saman.jpg" width = 200/><br>
-<b>Saman Amarasinghe</b> is a Professor in the Department of Electrical Engineering and Computer Science at Massachusetts Institute of Technology and a member of its Computer Science and Artificial Intelligence Laboratory (CSAIL) where he leads the Commit compiler group. Under Saman’s guidance, the Commit group has developed a myriad of pioneering programming languages and compilers including the StreamIt, StreamJIT, PetaBricks, Halide, Simit, MILK, Cimple, TACO, GraphIt, BioStream, CoLa and Seq programming languages and compilers, DynamoRIO, Helium, Tiramisu, Codon and BuildIt compiler/runtime frameworks, Superword Level Parallelism (SLP), goSLP and VeGen for vectorization, Ithemal machine learning based performance predictor, Program Shepherding to protect programs against external attacks, the OpenTuner extendable autotuner, and the Kendo deterministic execution system. He was the co-leader of the Raw architecture project. Beyond academia, Saman was a co-founder of Determina, Lanka Internet Services Ltd., Venti Technologies, DataCebo and Exaloop corporations.  Saman received his BS in Electrical Engineering and Computer Science from Cornell University in 1988, and his MSEE and Ph.D. from Stanford University in 1990 and 1997, respectively. He is an ACM Fellow.
-</div>
-<br>
-<div>
-<img src="Manya.jpg" width = 200/><br>
-<b>Manya Bansal</b> is a first year PhD student advised by Saman Amarasinghe and Jonathan Ragan-Kelley. She currently works on achieving high-performance for compute intensive applications using techniques in the programming language and compilers community. Her website can be found at https://manya-bansal.github.io/.
-</div>
-<br>
-<div>
-<img src="Vedant.jpg" width = 200/><br>
-<b>Vedant Paranjape</b> works on LLVM Compilers at AMD and is an incoming Masters student at Purdue for Fall 2024. He mainly works on middle-end and backend optimizations with some experience working on Clang frontend. His interest is primarily in systems research. Other than that he loves to design hardware, and tinker with obscure embedded boards.
-</div>
+Ajay is a 7th year PhD student advised by Prof. Saman Amarasinghe at CSAIL, MIT. His research is focused on enabling non-compiler experts to create their own programming languages with focus on high-performance systems domains.
+<br><br>
+
+<u>Prof. Yukinor Sato: Professor, Toyohashi University of Technology</u>
+<br>Yukinori Sato is an Associate Professor at Toyohashi University of Technology in Japan. He leads the Computer Systems and Performance Engineering Lab, which focuses on architecture of HPC and cloud computing environments and their compiler code optimization technique. He is a PI of an international project “Advanced automatic code optimization via DSL and its compiler for AI infrastructure on edge-cloud computing continuum” supported by JST ASPIRE.
+
+<br><br>
+<u>Prof. Saman Amarasinghe, Professor, Massachusetts Institute of Technology</u>
+<br>Saman Amarasinghe is the Thomas and Gerd Perkins Professor at EECS and Principal Investigator, CSAIL, MIT. He leads the Commit compiler research group in CSAIL, which focuses on programming languages and compilers that maximize application performance on modern computing platforms. He is a world leader in the field of high-performance domain-specific languages.
+
 <style>
 </style>
 <?php include '../../../footer.php'; ?>

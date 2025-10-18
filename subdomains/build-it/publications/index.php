@@ -40,6 +40,14 @@ Proceedings of the 2021 International Symposium on Code Generation and Optimizat
 <h2>Theses</h2>
 
 <p class="publication">
+<b class="publication-title">Democratizing High-Performance DSL Development with the BuildIt Framework</b> <br>
+<u>Ajay Brahmakshatriya</u><br>
+PhD Thesis, Massachuesetts Institute of Technology<br>
+Cambridge, MA Aug, 2025 [<a href="https://intimeand.space/docs/ajay-phd-thesis.pdf" target="_blank">PDF (Screen Friendly)</a>] 
+[<a href="https://intimeand.space/docs/ajay-phd-thesis-printer.pdf" target="_blank">PDF (Printer Friendly)</a>]
+</p>
+
+<p class="publication">
 <b class="publication-title">Implementing BREeze - a High-Performance Regular Expression Library Using Code Generation with BuildIt</b> <br>
 <u>Tamara Mitrovska</u><br>
 MEng Thesis, Massachuesetts Institute of Technology<br>

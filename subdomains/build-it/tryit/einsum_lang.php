@@ -323,10 +323,12 @@ static void run_einsum_pipeline(block::block::Ptr ast, std::ostream &amp;oss) {
 
 void einsum_code_generator::visit(block::for_stmt::Ptr s) {
 	std::string pragma_prefix ("pragma: ");
-	if (!s-&gt;annotation.compare(0, pragma_prefix.size(), pragma_prefix)) {
-		std::string pragma_value = s-&gt;annotation.substr(pragma_prefix.size());
-		oss &lt;&lt; "_Pragma(\"" &lt;&lt; pragma_value &lt;&lt; "\")" &lt;&lt; std::endl;
-		printer::indent(oss, curr_indent);
+	for (auto a: s-&gt;annotation) {
+		if (!a.compare(0, pragma_prefix.size(), pragma_prefix)) {
+			std::string pragma_value = a.substr(pragma_prefix.size());
+			oss &lt;&lt; "_Pragma(\"" &lt;&lt; pragma_value &lt;&lt; "\")" &lt;&lt; std::endl;
+			printer::indent(oss, curr_indent);
+		}
 	}
 	block::c_code_generator::visit(s);
 }

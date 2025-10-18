@@ -16,6 +16,10 @@ RewriteRule ^(.*)$ http://kael.csail.mit.edu:8234/$1 [P]
 RewriteCond %{HTTP_HOST} bc\-api\-dev\.intimeand\.space$ [NC]
 RewriteRule ^(.*)$ http://kael.csail.mit.edu:8236/$1 [P]
 
+RewriteCond %{HTTP_HOST} reflectile\.intimeand\.space$ [NC]
+RewriteCond %{REQUEST_URI} /api
+RewriteRule ^(.*)$ http://kael.csail.mit.edu:6677/api [P]
+
 #SSLOptions +StdEnvVars +StrictRequire
 #SSLOptions +StdEnvVars +OptRenegotiate -StrictRequire +FakeBasicAuth -ExportCertData 
 #SSLRequireSSL
@@ -42,6 +46,8 @@ RewriteRule ^(.*)$ https://intimeand.space/subdomains/buildit.so/$1 [P]
 RewriteCond %{HTTP_HOST} ajay\.hair$ [NC]
 RewriteRule ^(.*)$ https://intimeand.space/subdomains/ajay.hair/$1 [P]
 
+DirectoryIndex index.php index.html
+Options -Indexes
 
 <If "%{HTTP_HOST} == 'bc-api.intimeand.space'">
   Header set Access-Control-Allow-Origin "*"
@@ -59,6 +65,4 @@ RewriteRule ^(.*)$ https://intimeand.space/subdomains/ajay.hair/$1 [P]
 <FilesMatch ".(eot|otf|ttf|woff)">
   Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
-DirectoryIndex index.php
-DirectoryIndex index.html
-Options -Indexes
+

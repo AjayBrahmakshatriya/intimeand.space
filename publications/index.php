@@ -2,6 +2,29 @@
 <?php include '../root-template.php'; ?>
 <script>document.getElementById("link-publications").classList.add("active");</script>
 
+<h2>Theses</h2>
+
+<p class="publication">
+<b class="publication-title">Democratizing High-Performance DSL Development with the BuildIt Framework</b> <br>
+<u>Ajay Brahmakshatriya</u><br>
+PhD Thesis, Massachuesetts Institute of Technology<br>
+Cambridge, MA Aug, 2025 [<a href="https://intimeand.space/docs/ajay-phd-thesis.pdf" target="_blank">PDF (Screen Friendly)</a>] 
+[<a href="https://intimeand.space/docs/ajay-phd-thesis-printer.pdf" target="_blank">PDF (Printer Friendly)</a>]
+</p>
+
+<p class="publication">
+<b class="publication-title">Universal Graph Framework: Achieving High-Performance across Algorithms, Graph Types, and Architectures</b> <br>
+<u>Ajay Brahmakshatriya</u><br>
+SM Thesis, Massachuesetts Institute of Technology<br>
+Cambridge, MA Aug, 2020 [<a href="https://intimeand.space/docs/ajay-sm-thesis.pdf" target="_blank">PDF</a>]
+</p>
+<p>&nbsp;</p>
+
+
+<br><br>
+
+<h2>Conference Publications</h2>
+<p>&nbsp;</p>
 <p class="publication">
 <b class="publication-title">NetBlocks: Staging Layouts for High-Performance Custom Host Network Stacks</b> <br>
 <u>Ajay Brahmakshatriya</u>, Chris Rinard, Manya Ghobadi, Saman Amarasinghe <br>
@@ -65,13 +88,6 @@ Proceedings of the Data Compression Conference (DCC), 2021 [<a href="https://sig
 
 <!--<a href="https://scholar.google.com/citations?user=1O9XsSoAAAAJ&hl=en" class="icons-link"><img class="icons"  src="/../images/googlescholar.svg"/></a>-->
 
-<p class="publication">
-<b class="publication-title">Universal Graph Framework: Achieving High-Performance across Algorithms, Graph Types, and Architectures</b> <br>
-<u>Ajay Brahmakshatriya</u><br>
-SM Thesis, Massachuesetts Institute of Technology<br>
-Cambridge, MA Aug, 2020 [<a href="https://intimeand.space/docs/ajay-sm-thesis.pdf" target="_blank">PDF</a>]
-</p>
-<p>&nbsp;</p>
 
 <p class="publication">
 <b class="publication-title">Optimizing Ordered Graph Algorithms with GraphIt</b> <br>
